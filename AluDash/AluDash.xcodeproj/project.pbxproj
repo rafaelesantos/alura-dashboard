@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4CBC68DC269165B300D89F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC68DB269165B300D89F5F /* AppDelegate.swift */; };
+		4CBC68DE269165B300D89F5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC68DD269165B300D89F5F /* SceneDelegate.swift */; };
+		4CBC68E3269165B300D89F5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBC68E1269165B300D89F5F /* Main.storyboard */; };
+		4CBC68E6269165B300D89F5F /* AluDash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC68E4269165B300D89F5F /* AluDash.xcdatamodeld */; };
+		4CBC68E8269165B700D89F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CBC68E7269165B700D89F5F /* Assets.xcassets */; };
+		4CBC68EB269165B700D89F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBC68E9269165B700D89F5F /* LaunchScreen.storyboard */; };
+		4CBC68F6269165B700D89F5F /* AluDashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC68F5269165B700D89F5F /* AluDashTests.swift */; };
+		4CBC6901269165B700D89F5F /* AluDashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC6900269165B700D89F5F /* AluDashUITests.swift */; };
+		4CBC6912269165E400D89F5F /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC6911269165E400D89F5F /* Dashboard.swift */; };
+		4CBC69152691670600D89F5F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC69132691670600D89F5F /* DashboardViewController.swift */; };
+		4CBC69182691671900D89F5F /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC69172691671900D89F5F /* DashboardViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CBC68F2269165B700D89F5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CBC68D0269165B300D89F5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CBC68D7269165B300D89F5F;
+			remoteInfo = AluDash;
+		};
+		4CBC68FD269165B700D89F5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CBC68D0269165B300D89F5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CBC68D7269165B300D89F5F;
+			remoteInfo = AluDash;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4CBC68D8269165B300D89F5F /* AluDash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AluDash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CBC68DB269165B300D89F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4CBC68DD269165B300D89F5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4CBC68E2269165B300D89F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4CBC68E5269165B300D89F5F /* AluDash.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AluDash.xcdatamodel; sourceTree = "<group>"; };
+		4CBC68E7269165B700D89F5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CBC68EA269165B700D89F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4CBC68EC269165B700D89F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CBC68F1269165B700D89F5F /* AluDashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AluDashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CBC68F5269165B700D89F5F /* AluDashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AluDashTests.swift; sourceTree = "<group>"; };
+		4CBC68F7269165B700D89F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CBC68FC269165B700D89F5F /* AluDashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AluDashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CBC6900269165B700D89F5F /* AluDashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AluDashUITests.swift; sourceTree = "<group>"; };
+		4CBC6902269165B700D89F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CBC6911269165E400D89F5F /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		4CBC69132691670600D89F5F /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		4CBC69172691671900D89F5F /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CBC68D5269165B300D89F5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CBC68EE269165B700D89F5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CBC68F9269165B700D89F5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CBC68CF269165B300D89F5F = {
+			isa = PBXGroup;
+			children = (
+				4CBC68DA269165B300D89F5F /* AluDash */,
+				4CBC68F4269165B700D89F5F /* AluDashTests */,
+				4CBC68FF269165B700D89F5F /* AluDashUITests */,
+				4CBC68D9269165B300D89F5F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4CBC68D9269165B300D89F5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CBC68D8269165B300D89F5F /* AluDash.app */,
+				4CBC68F1269165B700D89F5F /* AluDashTests.xctest */,
+				4CBC68FC269165B700D89F5F /* AluDashUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CBC68DA269165B300D89F5F /* AluDash */ = {
+			isa = PBXGroup;
+			children = (
+				4CBC6910269165D300D89F5F /* Model */,
+				4CBC690F269165CD00D89F5F /* View */,
+				4CBC690E269165C600D89F5F /* ViewModel */,
+				4CBC68DB269165B300D89F5F /* AppDelegate.swift */,
+				4CBC68DD269165B300D89F5F /* SceneDelegate.swift */,
+				4CBC68E1269165B300D89F5F /* Main.storyboard */,
+				4CBC68E7269165B700D89F5F /* Assets.xcassets */,
+				4CBC68E9269165B700D89F5F /* LaunchScreen.storyboard */,
+				4CBC68EC269165B700D89F5F /* Info.plist */,
+				4CBC68E4269165B300D89F5F /* AluDash.xcdatamodeld */,
+			);
+			path = AluDash;
+			sourceTree = "<group>";
+		};
+		4CBC68F4269165B700D89F5F /* AluDashTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CBC68F5269165B700D89F5F /* AluDashTests.swift */,
+				4CBC68F7269165B700D89F5F /* Info.plist */,
+			);
+			path = AluDashTests;
+			sourceTree = "<group>";
+		};
+		4CBC68FF269165B700D89F5F /* AluDashUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4CBC6900269165B700D89F5F /* AluDashUITests.swift */,
+				4CBC6902269165B700D89F5F /* Info.plist */,
+			);
+			path = AluDashUITests;
+			sourceTree = "<group>";
+		};
+		4CBC690E269165C600D89F5F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4CBC69172691671900D89F5F /* DashboardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4CBC690F269165CD00D89F5F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4CBC69132691670600D89F5F /* DashboardViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4CBC6910269165D300D89F5F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CBC6911269165E400D89F5F /* Dashboard.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CBC68D7269165B300D89F5F /* AluDash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CBC6905269165B700D89F5F /* Build configuration list for PBXNativeTarget "AluDash" */;
+			buildPhases = (
+				4CBC68D4269165B300D89F5F /* Sources */,
+				4CBC68D5269165B300D89F5F /* Frameworks */,
+				4CBC68D6269165B300D89F5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AluDash;
+			productName = AluDash;
+			productReference = 4CBC68D8269165B300D89F5F /* AluDash.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4CBC68F0269165B700D89F5F /* AluDashTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CBC6908269165B700D89F5F /* Build configuration list for PBXNativeTarget "AluDashTests" */;
+			buildPhases = (
+				4CBC68ED269165B700D89F5F /* Sources */,
+				4CBC68EE269165B700D89F5F /* Frameworks */,
+				4CBC68EF269165B700D89F5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CBC68F3269165B700D89F5F /* PBXTargetDependency */,
+			);
+			name = AluDashTests;
+			productName = AluDashTests;
+			productReference = 4CBC68F1269165B700D89F5F /* AluDashTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4CBC68FB269165B700D89F5F /* AluDashUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CBC690B269165B700D89F5F /* Build configuration list for PBXNativeTarget "AluDashUITests" */;
+			buildPhases = (
+				4CBC68F8269165B700D89F5F /* Sources */,
+				4CBC68F9269165B700D89F5F /* Frameworks */,
+				4CBC68FA269165B700D89F5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CBC68FE269165B700D89F5F /* PBXTargetDependency */,
+			);
+			name = AluDashUITests;
+			productName = AluDashUITests;
+			productReference = 4CBC68FC269165B700D89F5F /* AluDashUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CBC68D0269165B300D89F5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					4CBC68D7269165B300D89F5F = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					4CBC68F0269165B700D89F5F = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 4CBC68D7269165B300D89F5F;
+					};
+					4CBC68FB269165B700D89F5F = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 4CBC68D7269165B300D89F5F;
+					};
+				};
+			};
+			buildConfigurationList = 4CBC68D3269165B300D89F5F /* Build configuration list for PBXProject "AluDash" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4CBC68CF269165B300D89F5F;
+			productRefGroup = 4CBC68D9269165B300D89F5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CBC68D7269165B300D89F5F /* AluDash */,
+				4CBC68F0269165B700D89F5F /* AluDashTests */,
+				4CBC68FB269165B700D89F5F /* AluDashUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CBC68D6269165B300D89F5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CBC68EB269165B700D89F5F /* LaunchScreen.storyboard in Resources */,
+				4CBC68E8269165B700D89F5F /* Assets.xcassets in Resources */,
+				4CBC68E3269165B300D89F5F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CBC68EF269165B700D89F5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CBC68FA269165B700D89F5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CBC68D4269165B300D89F5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CBC69152691670600D89F5F /* DashboardViewController.swift in Sources */,
+				4CBC68DC269165B300D89F5F /* AppDelegate.swift in Sources */,
+				4CBC6912269165E400D89F5F /* Dashboard.swift in Sources */,
+				4CBC68E6269165B300D89F5F /* AluDash.xcdatamodeld in Sources */,
+				4CBC68DE269165B300D89F5F /* SceneDelegate.swift in Sources */,
+				4CBC69182691671900D89F5F /* DashboardViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CBC68ED269165B700D89F5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CBC68F6269165B700D89F5F /* AluDashTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CBC68F8269165B700D89F5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CBC6901269165B700D89F5F /* AluDashUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CBC68F3269165B700D89F5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CBC68D7269165B300D89F5F /* AluDash */;
+			targetProxy = 4CBC68F2269165B700D89F5F /* PBXContainerItemProxy */;
+		};
+		4CBC68FE269165B700D89F5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CBC68D7269165B300D89F5F /* AluDash */;
+			targetProxy = 4CBC68FD269165B700D89F5F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4CBC68E1269165B300D89F5F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CBC68E2269165B300D89F5F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4CBC68E9269165B700D89F5F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CBC68EA269165B700D89F5F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CBC6903269165B700D89F5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4CBC6904269165B700D89F5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4CBC6906269165B700D89F5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7QLR2PH2X;
+				INFOPLIST_FILE = AluDash/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.rafaelescaleira.AluDash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4CBC6907269165B700D89F5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7QLR2PH2X;
+				INFOPLIST_FILE = AluDash/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.rafaelescaleira.AluDash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4CBC6909269165B700D89F5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7QLR2PH2X;
+				INFOPLIST_FILE = AluDashTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.rafaelescaleira.AluDashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AluDash.app/AluDash";
+			};
+			name = Debug;
+		};
+		4CBC690A269165B700D89F5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7QLR2PH2X;
+				INFOPLIST_FILE = AluDashTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.rafaelescaleira.AluDashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AluDash.app/AluDash";
+			};
+			name = Release;
+		};
+		4CBC690C269165B700D89F5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7QLR2PH2X;
+				INFOPLIST_FILE = AluDashUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.rafaelescaleira.AluDashUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AluDash;
+			};
+			name = Debug;
+		};
+		4CBC690D269165B700D89F5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7QLR2PH2X;
+				INFOPLIST_FILE = AluDashUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.rafaelescaleira.AluDashUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AluDash;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CBC68D3269165B300D89F5F /* Build configuration list for PBXProject "AluDash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CBC6903269165B700D89F5F /* Debug */,
+				4CBC6904269165B700D89F5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CBC6905269165B700D89F5F /* Build configuration list for PBXNativeTarget "AluDash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CBC6906269165B700D89F5F /* Debug */,
+				4CBC6907269165B700D89F5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CBC6908269165B700D89F5F /* Build configuration list for PBXNativeTarget "AluDashTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CBC6909269165B700D89F5F /* Debug */,
+				4CBC690A269165B700D89F5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CBC690B269165B700D89F5F /* Build configuration list for PBXNativeTarget "AluDashUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CBC690C269165B700D89F5F /* Debug */,
+				4CBC690D269165B700D89F5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4CBC68E4269165B300D89F5F /* AluDash.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4CBC68E5269165B300D89F5F /* AluDash.xcdatamodel */,
+			);
+			currentVersion = 4CBC68E5269165B300D89F5F /* AluDash.xcdatamodel */;
+			path = AluDash.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4CBC68D0269165B300D89F5F /* Project object */;
+}
