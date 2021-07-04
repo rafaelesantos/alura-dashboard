@@ -26,11 +26,21 @@ public class DashboardViewModel {
         }
     }
     
-    private func load(token: String, result: @escaping (Dashboard?) -> ()) {
+    func load(token: String, result: @escaping (Dashboard?) -> ()) {
         if let url = URL(string: Dashboard.url + token) {
             URLSession.shared.dataTask(with: url) { data, response, error in
                 if let data = data {
-                    let decodedData = try? JSONDecoder().decode(Dashboard.self, from: data)
+                    var decodedData = try? JSONDecoder().decode(Dashboard.self, from: data)
+                    decodedData?.guides?.sort(by: { prev, next in
+                        let prevProgress = Float(prev.finishedCourses ?? 0) / Float(prev.totalCourses ?? 1)
+                        let nextProgress = Float(next.finishedCourses ?? 0) / Float(next.totalCourses ?? 1)
+                        return prevProgress > nextProgress
+                    })
+                    decodedData?.courseProgresses?.sort(by: { prev, next in
+                        let prevProgress = Float(prev.progress ?? 0)
+                        let nextProgress = Float(next.progress ?? 0)
+                        return prevProgress > nextProgress
+                    })
                     result(decodedData)
                 }
             }.resume()

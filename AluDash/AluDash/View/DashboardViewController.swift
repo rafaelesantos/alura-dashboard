@@ -8,14 +8,19 @@
 import UIKit
 import SafariServices
 
-class DashboardViewController: UIViewController, UISearchBarDelegate, UISearchResultsUpdating {
+class DashboardViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var leftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var rightConstraint: NSLayoutConstraint!
     private var dashboardViewModel: DashboardViewModel!
-    private var searchController = UISearchController(searchResultsController: nil)
-    private var token: String? = UserDefaults.standard.string(forKey: "Token")
+    private var token: String? = UserDefaults.standard.string(forKey: "selected_token")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        #if targetEnvironment(macCatalyst)
+        self.leftConstraint.constant = 70
+        self.rightConstraint.constant = 70
+        #endif
         self.dashboardViewModel = DashboardViewModel(token: self.token ?? "")
         self.reloadButton()
         self.dashboardViewModel.bind = {
@@ -23,32 +28,19 @@ class DashboardViewController: UIViewController, UISearchBarDelegate, UISearchRe
                 self.tableView.reloadData()
             }
         }
-        self.setSearchBar(searchController: self.searchController, placeholder: "Informe o token", self, self)
     }
     
     @IBAction func reloadButton() {
-        self.dashboardViewModel.reload(token: self.token ?? "")
+        guard let controller = storyboard?.instantiateViewController(identifier: "TokenViewController") as? TokenViewController else { return }
+        controller.dashboardViewModel = self.dashboardViewModel
+        controller.delegate = self
+        self.present(controller, animated: true, completion: nil)
     }
-    
-    func setSearchBar(searchController: UISearchController, placeholder: String = "Search", _ searchBarDelegate: UISearchBarDelegate, _ searchResultsUpdater: UISearchResultsUpdating) {
-        searchController.searchResultsUpdater = searchResultsUpdater
-        searchController.searchBar.delegate = searchBarDelegate
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = placeholder
-        self.navigationItem.searchController = searchController
-        self.navigationItem.hidesSearchBarWhenScrolling = false
-        self.definesPresentationContext = true
-    }
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if searchBar.text?.isEmpty == false {
-            UserDefaults.standard.setValue(searchController.searchBar.text!, forKey: "Token")
-            self.dashboardViewModel.reload(token: searchController.searchBar.text!)
-        }
+}
+
+extension DashboardViewController: TokenDelegate {
+    func token(_ token: String) {
+        self.dashboardViewModel.reload(token: token)
     }
 }
 
@@ -74,7 +66,7 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
             return cell
         } else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CourseProgressesTableViewCell", for: indexPath) as? CourseProgressesTableViewCell
-            cell?.approvedImage.image = self.dashboardViewModel.dashboard?.courseProgresses?[indexPath.row].finished == true ? UIImage(systemName: "checkmark.seal.fill") : UIImage(systemName: "xmark.seal.fill")
+            cell?.approvedImage.image = UIImage(systemName: "circle.dashed.inset.fill")
             cell?.approvedImage.tintColor = self.dashboardViewModel.dashboard?.courseProgresses?[indexPath.row].progress == 0 ? .systemPink : self.dashboardViewModel.dashboard?.courseProgresses?[indexPath.row].progress == 100 ? .systemGreen : .systemOrange
             cell?.courseTitle.text = self.dashboardViewModel.dashboard?.courseProgresses?[indexPath.row].name
             cell?.coursePercent.text = "\(self.dashboardViewModel.dashboard?.courseProgresses?[indexPath.row].progress ?? 0)%"
@@ -85,11 +77,11 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
             formatter.dateFormat = "dd/MM/yyyy"
             cell?.courseDate.text = formatter.string(from: date)
             cell?.selectionStyle = .none
-            cell?.accessoryType = .none
+            cell?.accessoryType = .disclosureIndicator
             return cell ?? tableView.dequeueReusableCell(withIdentifier: "NoData", for: indexPath)
         } else if indexPath.section == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CourseProgressesTableViewCell", for: indexPath) as? CourseProgressesTableViewCell
-            cell?.approvedImage.image = UIImage(systemName: "video.bubble.left.fill")
+            cell?.approvedImage.image = UIImage(systemName: "circle.dashed")
             cell?.approvedImage.tintColor = self.dashboardViewModel.dashboard?.guides?[indexPath.row].finishedCourses == 0 ? .systemPink : self.dashboardViewModel.dashboard?.guides?[indexPath.row].finishedCourses == self.dashboardViewModel.dashboard?.guides?[indexPath.row].totalCourses ? .systemGreen : .systemOrange
             cell?.courseTitle.text = self.dashboardViewModel.dashboard?.guides?[indexPath.row].name
             cell?.coursePercent.text = "\(Int((Float(self.dashboardViewModel.dashboard?.guides?[indexPath.row].finishedCourses ?? 0) / Float(self.dashboardViewModel.dashboard?.guides?[indexPath.row].totalCourses ?? 1)) * 100.0))%"
@@ -113,6 +105,10 @@ extension DashboardViewController: UITableViewDataSource, UITableViewDelegate {
                 self.present(safariViewController, animated: true, completion: nil)
             }
             tableView.deselectRow(at: indexPath, animated: true)
+        } else if indexPath.section == 1 {
+            guard let controller = storyboard?.instantiateViewController(identifier: "CourseViewController") as? CourseViewController else { return }
+            controller.courseSlug = self.dashboardViewModel.dashboard?.courseProgresses?[indexPath.row].slug
+            self.present(controller, animated: true, completion: nil)
         }
     }
 }

@@ -18,6 +18,10 @@
 		4CBC6912269165E400D89F5F /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC6911269165E400D89F5F /* Dashboard.swift */; };
 		4CBC69152691670600D89F5F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC69132691670600D89F5F /* DashboardViewController.swift */; };
 		4CBC69182691671900D89F5F /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC69172691671900D89F5F /* DashboardViewModel.swift */; };
+		4CBC691A2692140100D89F5F /* TokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC69192692140100D89F5F /* TokenViewController.swift */; };
+		4CBC691D2692418C00D89F5F /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC691C2692418C00D89F5F /* Course.swift */; };
+		4CBC691F269241A600D89F5F /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC691E269241A600D89F5F /* CourseViewModel.swift */; };
+		4CBC6921269242FC00D89F5F /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBC6920269242FC00D89F5F /* CourseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,11 @@
 		4CBC6911269165E400D89F5F /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		4CBC69132691670600D89F5F /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		4CBC69172691671900D89F5F /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		4CBC69192692140100D89F5F /* TokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenViewController.swift; sourceTree = "<group>"; };
+		4CBC691B2692332A00D89F5F /* AluDash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AluDash.entitlements; sourceTree = "<group>"; };
+		4CBC691C2692418C00D89F5F /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		4CBC691E269241A600D89F5F /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
+		4CBC6920269242FC00D89F5F /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +114,7 @@
 		4CBC68DA269165B300D89F5F /* AluDash */ = {
 			isa = PBXGroup;
 			children = (
+				4CBC691B2692332A00D89F5F /* AluDash.entitlements */,
 				4CBC6910269165D300D89F5F /* Model */,
 				4CBC690F269165CD00D89F5F /* View */,
 				4CBC690E269165C600D89F5F /* ViewModel */,
@@ -141,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				4CBC69172691671900D89F5F /* DashboardViewModel.swift */,
+				4CBC691E269241A600D89F5F /* CourseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -149,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				4CBC69132691670600D89F5F /* DashboardViewController.swift */,
+				4CBC69192692140100D89F5F /* TokenViewController.swift */,
+				4CBC6920269242FC00D89F5F /* CourseViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				4CBC6911269165E400D89F5F /* Dashboard.swift */,
+				4CBC691C2692418C00D89F5F /* Course.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,10 +305,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CBC691D2692418C00D89F5F /* Course.swift in Sources */,
 				4CBC69152691670600D89F5F /* DashboardViewController.swift in Sources */,
 				4CBC68DC269165B300D89F5F /* AppDelegate.swift in Sources */,
+				4CBC6921269242FC00D89F5F /* CourseViewController.swift in Sources */,
 				4CBC6912269165E400D89F5F /* Dashboard.swift in Sources */,
+				4CBC691A2692140100D89F5F /* TokenViewController.swift in Sources */,
 				4CBC68E6269165B300D89F5F /* AluDash.xcdatamodeld in Sources */,
+				4CBC691F269241A600D89F5F /* CourseViewModel.swift in Sources */,
 				4CBC68DE269165B300D89F5F /* SceneDelegate.swift in Sources */,
 				4CBC69182691671900D89F5F /* DashboardViewModel.swift in Sources */,
 			);
@@ -472,15 +490,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AluDash/AluDash.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q7QLR2PH2X;
 				INFOPLIST_FILE = AluDash/Info.plist;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.rafaelescaleira.AluDash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -491,15 +512,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AluDash/AluDash.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q7QLR2PH2X;
 				INFOPLIST_FILE = AluDash/Info.plist;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.rafaelescaleira.AluDash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
